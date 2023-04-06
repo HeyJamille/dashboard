@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    color-scheme: dark;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10rem 60rem 100rem;
+    grid-template-areas: "h h"
+                        "a1 a1"
+                        "a2 a3";
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 5rem 15rem 5rem 15rem;
+
+    grid-area: h;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+    font-size: 3rem;
+    list-style: none;
+}
+
+.article1 {
+    grid-area: a1;
+    justify-self: center;
+
+    width: 110rem;
+}
+
+.article2 {
+    background-color: chartreuse;
+    grid-area: a2;
+}
+
+.article3 {
+    background-color: black;
+    grid-area: a3;
+}
+
+.article3 canvas {
+    justify-self: center;
+    align-items: center;
+    
+}
+
+
+
+
+
