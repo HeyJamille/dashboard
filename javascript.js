@@ -32,7 +32,7 @@ const config = {
 
 const chart1 = new Chart(ctx, config)
 
-/* Second chart */
+/* Second chart 
 const ctx2 = document.getElementById('chart2');
 
 const labels2 = [
@@ -66,8 +66,7 @@ const config2 = {
 
 const chart2 = new Chart(ctx2, config2)
 
-
-
+*/
 
 
 
