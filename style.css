@@ -11,32 +11,29 @@ html {
     color-scheme: dark;
 }
 
-body {
-    height: 100%;
-}
-
-/* 1º Container */
-.container1 {
+/* CONTAINER */
+.container {
     display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 15% 100%;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    grid-template-rows: 10% 5% 25% 50%;
+    gap: 2rem;
 
     height: 100vh;
 }
 
-.container1 header {
+.container header {
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    grid-column: 2/3;
+    grid-column: 2/8;
 }
 
-.container1 header h1 {
+.container header h1 {
     font-size: 3rem;
 }
 
-.container1 header div {
+.container header div {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
@@ -46,12 +43,13 @@ body {
     text-align: center;
 }
 
-.container1 aside {
+/* ASIDE */
+.container aside {
     background-color: green;
-    grid-row: 1/3;
+    grid-row: 1/5;
 }
 
-.container1 aside nav ul {
+.container aside nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,7 +62,7 @@ body {
     list-style: none;
 }
 
-.container1 aside .mobile-menu {
+.container aside .mobile-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,69 +72,57 @@ body {
     cursor: pointer;
 }
 
-.container1 aside .mobile-menu div {
+.container aside .mobile-menu div {
     width: 3.2rem;
     height: 0.2rem;
     background-color: white;
     margin: 0.3rem;
 }
 
-/* 2º container*/
-.container2 {
-    display: grid;
-    grid-template-columns: repeat(5, 20%);
-    grid-template-rows: 10% 30% 60%;
-
-}
-
-.container2 h1 {
-    grid-column: span 5;
+/* SQUARE WITH INFORMATION */
+.container .title {
+    grid-column: 2/8;
 
     background-color: blueviolet;
-    padding: 1rem 0 1rem 2rem;
 }
 
-.container2 .bitcoin {
+.container .bitcoin {
     background-color: chocolate;
 }
 
-.container2 .ethereum {
+.container .ethereum {
     background-color: coral;
 }
 
-.container2 .binance_coin {
+.container .binance_coin {
     background-color: darkblue;
 }
 
-.container2 .binance {
+.container .binance {
     background-color: orangered;
 }
 
-.container2 .cardano {
+.container .cardano {
     background-color: floralwhite;
 }
 
-.container2 .tether {
+.container .tether {
     background-color: deeppink;
 }
 
-.container2 .historico {
+.container .historico {
     background-color: darkviolet;
     grid-column: span 3;
 }
 
-.container2 .chart {
+.container .chart {
     background-color: grey;
     grid-column: span 2;
 }
 
 
-
-/*Media Queries */
-@media (max-width: 999px) {
-    
-
-}
+/* MEDIA QUERIES */
+@media (max-width: 999px) {}
 
 @media (max-width: 900px) {}
 
