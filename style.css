@@ -81,7 +81,7 @@ html {
 
 /* SQUARE WITH INFORMATION */
 .container .title {
-    grid-column: 2/8;
+    grid-column: 2/7;
 
     background-color: blueviolet;
 }
