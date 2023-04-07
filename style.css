@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3rem;
 }
 
 html {
@@ -11,77 +12,132 @@ html {
 }
 
 body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10rem 60rem 100rem;
-    grid-template-areas: "h h"
-                        "a1 a1"
-                        "a2 a3";
+    height: 100%;
 }
 
-header {
+/* 1º Container */
+.container1 {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 15% 100%;
+
+    height: 100vh;
+}
+
+.container1 header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
-    margin: 5rem 15rem 5rem 15rem;
-
-    grid-area: h;
+    grid-column: 2/3;
 }
 
-header h1 {
-    font-size: 4rem;
-    font-weight: normal;
-}
-
-header nav ul {
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-
+.container1 header h1 {
     font-size: 3rem;
+}
+
+.container1 header div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    font-size: 1.2rem;
+
+    text-align: center;
+}
+
+.container1 aside {
+    background-color: green;
+    grid-row: 1/3;
+}
+
+.container1 aside nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    margin: 20rem 0 20rem 0;
+
+    font-size: 1.5rem;
     list-style: none;
 }
 
-.article1 {
-    grid-area: a1;
-    justify-self:  center;
-
-    width: 80%;
-}
-
-.article2 {
-    background-color: chartreuse;
-    grid-area: a2;
-}
-
-.article3 {
-    background-color: black;
-    grid-area: a3;
-}
-
-.article3 canvas {
-    justify-self: center;
+.container1 aside .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    
+
+    padding: 3rem 0 3rem 0;
+    cursor: pointer;
 }
 
-/* Medias Queries */
-@media (max-width: 900px) {
-    header {
-        margin-left: 3rem;
-    }
-    
-    header nav ul {
-        display: none;
-    }
-    .article1 {
-       width: 100%;
-       height: 50rem;
-    }
+.container1 aside .mobile-menu div {
+    width: 3.2rem;
+    height: 0.2rem;
+    background-color: white;
+    margin: 0.3rem;
+}
+
+/* 2º container*/
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 10% 30% 60%;
+
+}
+
+.container2 h1 {
+    grid-column: span 5;
+
+    background-color: blueviolet;
+    padding: 1rem 0 1rem 2rem;
+}
+
+.container2 .bitcoin {
+    background-color: chocolate;
+}
+
+.container2 .ethereum {
+    background-color: coral;
+}
+
+.container2 .binance_coin {
+    background-color: darkblue;
+}
+
+.container2 .binance {
+    background-color: orangered;
+}
+
+.container2 .cardano {
+    background-color: floralwhite;
+}
+
+.container2 .tether {
+    background-color: deeppink;
+}
+
+.container2 .historico {
+    background-color: darkviolet;
+    grid-column: span 3;
+}
+
+.container2 .chart {
+    background-color: grey;
+    grid-column: span 2;
 }
 
 
 
+/*Media Queries */
+@media (max-width: 999px) {
+    
 
+}
+
+@media (max-width: 900px) {}
+
+@media (max-width: 600px) {}

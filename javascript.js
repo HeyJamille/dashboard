@@ -68,5 +68,33 @@ const chart2 = new Chart(ctx2, config2)
 
 */
 
+/* Hamburguer Menu */
+class mobileNavBar {
+    constructor(mobileMenu) {
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navList = document.querySelector(navList);
+        this.navLinks = document.querySelector(navLinks);
+        this.activeClass = "active";
+    }
+
+    addClickEvent() {
+        this.mobileMenu.addEventListener("click", () => console.log("Heaaaaaaaaaaaa"));
+    }
+
+    init() {
+        if(this.mobileMenu) {
+            this.addClickEvent();
+        }
+    return this;
+    }
+}
+
+const mobileNavbar = new mobileNavbar(
+    ".mobile-menu",
+    ".nav-list",
+    ".nav-list li",
+);
+
+mobilenavbar.init();
 
 
