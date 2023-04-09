@@ -17,28 +17,29 @@
 <body>
     <main class="container">
         <header>
+            <!-- 
+            <aside>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+    
+                <nav class="nav-list">
+                    <ul>
+                        <li>Login</li>
+                        <li>Cadastre-se</li>
+                    </ul>
+                </nav>
+            </aside>
+            -->
             <h1>Dashboard</h1>
             <div>
                 <p>07/04/2023</p>
                 <p>Última Atualização</p>
             </div>
         </header>
-
-        <aside>
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-
-            <nav class="nav-list">
-                <ul>
-                    <li>Login</li>
-                    <li>Cadastre-se</li>
-                </ul>
-            </nav>
-        </aside>
-
+        
         <article class="title">
             <h1>PAINEL DE CRIPTOMOEDAS</h1>
         </article>
@@ -47,7 +48,10 @@
         
         <article class="bitcoin">
             <section>
-                <img src="">
+                <div class="image"> 
+                    <img src="./images/bitcoin.jpg">
+                </div>
+                
                 <h2>Bitcoin</h2>
                 <p>Preço</p>
             </section>
@@ -55,32 +59,44 @@
 
         <article class="ethereum">
             <section>
-                <img src="">
-                <h2>Bitcoin</h2>
+                <div class="image"> 
+                    <img src="./images/ethereum.png">
+                </div>
+
+                <h2>Ethereum</h2>
                 <p>Preço</p>
             </section>
         </article>
 
-        <article class="binance_coin">
+        <article class="binance">
             <section>
-                <img src="">
-                <h2>Bitcoin</h2>
+                <div class="image"> 
+                    <img src="./images/binance.jpg">
+                </div>
+
+                <h2>Binance</h2>
                 <p>Preço</p>
             </section>
         </article>
 
         <article class="cardano">
             <section>
-                <img src="">
-                <h2>Bitcoin</h2>
+                <div class="image"> 
+                    <img src="./images/cardano.jpg">
+                </div>
+
+                <h2>Cardano</h2>
                 <p>Preço</p>
             </section>
         </article>
 
         <article class="tether">
             <section>
-                <img src="">
-                <h2>Bitcoin</h2>
+                <div class="image"> 
+                    <img src="./images/tether.jpg">
+                </div>
+
+                <h2>Tether</h2>
                 <p>Preço</p>
             </section>
         </article>
@@ -89,9 +105,8 @@
         </article>
 
         <article class="chart">
+            <canvas id="chart1" width="90rem" height="60rem"></canvas>
         </article>
-
-
     </main>
 
 </body>

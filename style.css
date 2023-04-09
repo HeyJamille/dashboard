@@ -14,23 +14,36 @@ html {
 /* CONTAINER */
 .container {
     display: grid;
-    grid-template-columns: 15% 15% 15% 15% 15% 15%;
-    grid-template-rows: 10% 5% 25% 50%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% 8% 17% 50%;
+    grid-template-areas:
+        "h h h h h"
+        "title title title title title"
+        "bitcoin ethereum binance cardano tether"
+        "historico historico historico chart chart";
+
     gap: 2rem;
 
     height: 100vh;
+    margin: 2rem 3rem 2rem 3rem;
 }
 
+.container article, header {
+    border-radius: 1rem;
+}
+
+/* CABEÇALHO DO CONTAINER */
 .container header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    grid-area: h;
 
-    grid-column: 2/8;
+    background-color: #3d3766;
 }
 
 .container header h1 {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .container header div {
@@ -43,23 +56,9 @@ html {
     text-align: center;
 }
 
-/* ASIDE */
-.container aside {
-    background-color: green;
-    grid-row: 1/5;
-}
-
+/* ASIDE 
 .container aside nav ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    margin: 20rem 0 20rem 0;
-
-    font-size: 1.5rem;
-    list-style: none;
+    display: none;
 }
 
 .container aside .mobile-menu {
@@ -68,7 +67,6 @@ html {
     justify-content: center;
     align-items: center;
 
-    padding: 3rem 0 3rem 0;
     cursor: pointer;
 }
 
@@ -78,52 +76,177 @@ html {
     background-color: white;
     margin: 0.3rem;
 }
-
+*/
 /* SQUARE WITH INFORMATION */
 .container .title {
-    grid-column: 2/7;
+    grid-area: title;
+}
 
-    background-color: blueviolet;
+.container .title h1 {
+    font-size: 1.6rem;
 }
 
 .container .bitcoin {
-    background-color: chocolate;
+    grid-area: bitcoin;
+    background-color: #3d3766;
 }
 
 .container .ethereum {
-    background-color: coral;
-}
-
-.container .binance_coin {
-    background-color: darkblue;
+    grid-area: ethereum;
+    background-color: #3d3766;
 }
 
 .container .binance {
-    background-color: orangered;
+    grid-area: binance;
+    background-color: #3d3766;
 }
 
 .container .cardano {
-    background-color: floralwhite;
+    grid-area: cardano;
+    background-color: #3d3766;
 }
 
 .container .tether {
-    background-color: deeppink;
+    grid-area: tether;
+    background-color: #3d3766;
 }
 
 .container .historico {
-    background-color: darkviolet;
-    grid-column: span 3;
+    grid-area: historico;
+    background-color: #3d3766;
 }
 
+/* SQUARE WITH CHART */
 .container .chart {
-    background-color: grey;
-    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: chart;
+
+    background-color: #3d3766;
+}
+
+/* SECTION WITHIN SQUARE WITH INFORMATION */
+.container article section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    font-size: 1.2rem;
+}
+
+/* DIV IMAGE WITHIN SQUARE WITH INFORMATION */
+.container article section .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: -3rem;
+
+    border-radius: 5rem;
+    height: 6rem;
+    width: 6rem;
+}
+
+/* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF BITCOIN*/
+.container .bitcoin section .image {
+    background-color: #f89422;
+}
+
+/* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF ETHEREUM*/
+.container .ethereum section .image {
+    background-color: rgba(19, 19, 48, 0.918);
+}
+
+/* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF BINANCE*/
+.container .binance section .image {
+    background-color: #febe42;
+}
+
+/* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF CARDANO*/
+.container .cardano section .image {
+    background-color: #0336ac;
+}
+
+/* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF TETHER*/
+.container .tether section .image {
+    background-color: #029293;
+}
+
+/* CONFIGURATION OF IMAGES OF SQUARES WITH INFORMATION */
+.container article section img {
+    height: 6rem;
+    width: 6rem;
+
+    border-radius: 100%;
+}
+
+.container .ethereum section img {
+    height: 4rem;
+    width: 3rem;
 }
 
 
 /* MEDIA QUERIES */
-@media (max-width: 999px) {}
 
-@media (max-width: 900px) {}
+/* MOBILE LAYOUT */
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 7% 25% 25% 25% 25% 25% 25% 50% 80%;
+        grid-template-areas:
+            "h"
+            "title"
+            "bitcoin"
+            "ethereum"
+            "binance"
+            "cardano"
+            "tether"
+            "historico"
+            "chart";
+            
+        gap: 1rem;
+        margin-bottom: 90rem;
+    }
 
-@media (max-width: 600px) {}
+    .container header {
+        background-color: transparent;
+    }
+    
+    .container header h1 {
+        font-size: 3rem;
+    }
+    
+    .container article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding-top: 3rem;
+    }
+
+    
+}
+
+@media (max-width: 440px) {
+        .container header {
+            flex-direction: column;
+        }
+}
+
+@media (max-width: 330px) {
+    .container .title h1 {
+        font-size: 1.4rem;
+     }
+}
+
+@media (max-width: 305px) {
+    .container .title h1 {
+        font-size: 1rem;
+    }
+}
+
+

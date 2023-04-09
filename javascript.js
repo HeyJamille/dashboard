@@ -14,12 +14,19 @@ const labels = [
 
 const data = {
     labels,
-    datasets: [{
-        data: [12, 19, 3, 5, 2, 3],
-        label: "Moedas",
-        fill: true,
-        backgroundColor:'cyan'
-    }]
+    datasets: [
+        {
+            data: [12, 19, 3, 5, 2, 3],
+            label: "Moedas",
+            fill: true,
+            backgroundColor: 'rgba(83,47,165)',
+            borderColor: 'rgba(83,47,165)',
+            pointBackgroundColor: 'rgba(0,255,255,1)',
+            pointBorderColor: '#fff',
+            pointBorderWidth: 2,
+            pointRadius: 5
+        },
+    ],
 }
 
 const config = {
@@ -30,7 +37,8 @@ const config = {
     }
 };
 
-const chart1 = new Chart(ctx, config)
+const chart1 = new Chart(ctx, config);
+
 
 /* Second chart 
 const ctx2 = document.getElementById('chart2');
@@ -68,7 +76,7 @@ const chart2 = new Chart(ctx2, config2)
 
 */
 
-/* Hamburguer Menu */
+/* Hamburguer Menu 
 class mobileNavBar {
     constructor(mobileMenu) {
         this.mobileMenu = document.querySelector(mobileMenu);
@@ -96,5 +104,4 @@ const mobileNavbar = new mobileNavbar(
 );
 
 mobilenavbar.init();
-
-
+*/
