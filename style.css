@@ -15,21 +15,22 @@ html {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 10% 8% 17% 50%;
+    grid-template-rows: 15% 5% 33% 33% 71%;
     grid-template-areas:
-        "h h h h h"
-        "title title title title title"
-        "bitcoin ethereum binance cardano tether"
-        "historico historico historico chart chart";
+        "h h h h h "
+        "title title title title title "
+        "bitcoin ethereum chart-bar chart-bar chart-bar"
+        "cardano tether chart-bar chart-bar chart-bar"
+        "table table table chart chart";
 
-    gap: 2rem;
+    gap: 2em;
 
     height: 100vh;
     margin: 2rem 3rem 2rem 3rem;
 }
 
-.container article, header {
-    border-radius: 1rem;
+.container header, article {
+    border-radius: 2rem;
 }
 
 /* CABEÇALHO DO CONTAINER */
@@ -77,9 +78,11 @@ html {
     margin: 0.3rem;
 }
 */
+
 /* SQUARE WITH INFORMATION */
 .container .title {
     grid-area: title;
+    text-align: center;
 }
 
 .container .title h1 {
@@ -96,11 +99,6 @@ html {
     background-color: #3d3766;
 }
 
-.container .binance {
-    grid-area: binance;
-    background-color: #3d3766;
-}
-
 .container .cardano {
     grid-area: cardano;
     background-color: #3d3766;
@@ -111,8 +109,18 @@ html {
     background-color: #3d3766;
 }
 
-.container .historico {
-    grid-area: historico;
+.container .chart-bar {
+    grid-area: chart-bar;
+    background-color: #3d3766;
+}
+
+.container .table {
+    grid-area: table;
+    background-color: #3d3766;
+}
+
+.container .chart {
+    grid-area: chart;
     background-color: #3d3766;
 }
 
@@ -127,6 +135,12 @@ html {
 }
 
 /* SECTION WITHIN SQUARE WITH INFORMATION */
+.container article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container article section {
     display: flex;
     flex-direction: column;
@@ -134,7 +148,21 @@ html {
     align-items: center;
     gap: 0.5rem;
 
+    padding: 1rem;
+}
+
+.container article section h2 {
+    font-size: 2rem;
+}
+
+.container article section h3 {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.container article section p {
     font-size: 1.2rem;
+    text-align: center;
 }
 
 /* DIV IMAGE WITHIN SQUARE WITH INFORMATION */
@@ -144,11 +172,9 @@ html {
     justify-content: center;
     align-items: center;
 
-    margin-top: -3rem;
-
     border-radius: 5rem;
-    height: 6rem;
-    width: 6rem;
+    height: 7rem;
+    width: 7rem;
 }
 
 /* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF BITCOIN*/
@@ -193,7 +219,76 @@ html {
 /* MEDIA QUERIES */
 
 /* MOBILE LAYOUT */
-@media (max-width: 700px) {
+
+/* CELL PHONE WITH SCREENS BETWEEN 600px and 763px */
+@media (min-width: 600px) and (max-width: 763px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 15% 5% 22% 22% 22% 22% 50% 50%;
+        grid-template-areas:
+            "h h"
+            "title title"
+            "bitcoin ethereum"
+            "cardano tether"
+            "chart-bar chart-bar"
+            "table table"
+            "chart chart";
+
+        gap: 1rem;
+    }
+}
+
+/* CELL PHONE WITH SCREENS SMALLER THAN 600px */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 5% 22% 22% 22% 22% 50% 50%;
+        grid-template-areas:
+            "h"
+            "title"
+            "bitcoin"
+            "ethereum"
+            "cardano"
+            "tether"
+            "chart-bar"
+            "table"
+            "chart";
+    }
+
+    .container .title h1 {
+        padding-top: 1rem;
+    }
+
+    .container header {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 510px) {
+    .container header {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 330px) {
+    .container header h1 {
+        font-size: 3.2rem;
+    }
+
+    .container {
+        grid-template-rows: 15% 8% 22% 22% 22% 22% 50% 50%;
+    }
+}
+
+@media (max-width: 298px) {
+    .container {
+        grid-template-rows: 15% 8% 24% 24% 24% 24% 50% 50%;
+    }
+}
+
+
+/* CELL PHONE 
+@media (min-width: 600px) and (max-width: 768px) {
     .container {
         grid-template-columns: 100%;
         grid-template-rows: 10% 7% 25% 25% 25% 25% 25% 25% 50% 80%;
@@ -227,8 +322,6 @@ html {
 
         padding-top: 3rem;
     }
-
-    
 }
 
 @media (max-width: 440px) {
@@ -248,5 +341,4 @@ html {
         font-size: 1rem;
     }
 }
-
-
+*/

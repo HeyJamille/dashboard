@@ -1,5 +1,5 @@
 /* First chart */
-const ctx = document.getElementById('chart1');
+const ctx = document.getElementById('chart-bar');
 
 const labels = [
 
@@ -30,7 +30,7 @@ const data = {
 }
 
 const config = {
-    type: 'line',
+    type: 'bar',
     data,
     options: {
         responsive: true

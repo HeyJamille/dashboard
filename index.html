@@ -39,12 +39,10 @@
                 <p>Última Atualização</p>
             </div>
         </header>
-        
+
         <article class="title">
             <h1>PAINEL DE CRIPTOMOEDAS</h1>
         </article>
-        
-        <br> <!--Força o proximo elemento a pular uma linha-->
         
         <article class="bitcoin">
             <section>
@@ -53,7 +51,8 @@
                 </div>
                 
                 <h2>Bitcoin</h2>
-                <p>Preço</p>
+                <h3>Preço</h3>
+                <p>Valores últimas 24 horas</p>
             </section>
         </article>
 
@@ -64,19 +63,9 @@
                 </div>
 
                 <h2>Ethereum</h2>
-                <p>Preço</p>
-            </section>
-        </article>
-
-        <article class="binance">
-            <section>
-                <div class="image"> 
-                    <img src="./images/binance.jpg">
-                </div>
-
-                <h2>Binance</h2>
-                <p>Preço</p>
-            </section>
+                <h3>Preço</h3>
+                <p>Valores últimas 24 horas</p>
+            </section>  
         </article>
 
         <article class="cardano">
@@ -86,8 +75,9 @@
                 </div>
 
                 <h2>Cardano</h2>
-                <p>Preço</p>
-            </section>
+                <h3>Preço</h3>
+                <p>Valores últimas 24 horas</p>
+            </section>  
         </article>
 
         <article class="tether">
@@ -97,15 +87,21 @@
                 </div>
 
                 <h2>Tether</h2>
-                <p>Preço</p>
-            </section>
+                <h3>Preço</h3>
+                <p>Valores últimas 24 horas</p>
+            </section>  
         </article>
 
-        <article class="historico">
+        <article class="chart-bar">
+            <canvas id="chart-bar" width="90rem" height="60rem"></canvas>
+        </article>
+
+        <article class="table">
+            <canvas id="table" width="90rem" height="60rem"></canvas>
         </article>
 
         <article class="chart">
-            <canvas id="chart1" width="90rem" height="60rem"></canvas>
+            <canvas id="chart" width="90rem" height="60rem"></canvas>
         </article>
     </main>
 
