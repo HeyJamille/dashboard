@@ -17,14 +17,13 @@
 <body>
     <main class="container">
         <header>
-            <!-- 
             <aside>
                 <div class="mobile-menu">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-    
+            
                 <nav class="nav-list">
                     <ul>
                         <li>Login</li>
@@ -32,7 +31,7 @@
                     </ul>
                 </nav>
             </aside>
-            -->
+        
             <h1>Dashboard</h1>
             <div>
                 <p>07/04/2023</p>
@@ -97,11 +96,52 @@
         </article>
 
         <article class="table">
-            <canvas id="table" width="90rem" height="60rem"></canvas>
+            <table>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Preço Atual</th>
+                    <th>Máxima 24h</th>
+                    <th>Mínima 24h</th>
+                    <th>Variação 24h</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/images/bitcoin.jpg">
+                    </td>
+
+                    <td>Bitcoin</td>
+                    <td>Estudante</td>
+                </tr>
+                <tr>
+                    <td class="ethereum">
+                        <img src="/images/ethereum.png">
+                    </td>
+
+                    <td>Ethereum</td>
+                    <td>Designer</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/images/cardano.jpg">
+                    </td>
+
+                    <td>Cardano</td>
+                    <td>Estudante</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="/images/tether.jpg">
+                    </td>
+
+                    <td>Tether</td>
+                    <td>Designer</td>
+                </tr>
+            </table>
         </article>
 
-        <article class="chart">
-            <canvas id="chart" width="90rem" height="60rem"></canvas>
+        <article class="chart-pie">
+            <canvas id="chart-pie" width="90rem" height="60rem"></canvas>
         </article>
     </main>
 

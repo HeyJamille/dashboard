@@ -1,13 +1,14 @@
-/* First chart */
-const ctx = document.getElementById('chart-bar');
+/* FIRST CHART */
+
+Chart.defaults.color = '#fff';
 
 const labels = [
 
-    'Red',
-    'Blue',
-    'Yellow',
-    'Green',
-    'Purple',
+    'Bitcoin',
+    'Ethereum',
+    'Binance',
+    'Cardano',
+    'Tether',
     'Orange'
 
 ]
@@ -19,12 +20,13 @@ const data = {
             data: [12, 19, 3, 5, 2, 3],
             label: "Moedas",
             fill: true,
-            backgroundColor: 'rgba(83,47,165)',
-            borderColor: 'rgba(83,47,165)',
-            pointBackgroundColor: 'rgba(0,255,255,1)',
-            pointBorderColor: '#fff',
-            pointBorderWidth: 2,
-            pointRadius: 5
+            backgroundColor: [
+                '#f89422',
+                '#131330ea',
+                '#febe42',
+                '#0336ac',
+                '#029293',
+            ],
         },
     ],
 }
@@ -33,23 +35,32 @@ const config = {
     type: 'bar',
     data,
     options: {
-        responsive: true
+        responsive: true,
+
+        plugins: {
+            title: {
+                display: true,
+                text: 'Valores Atuais',
+                letterSpacing: 0.3
+            }
+        }
     }
 };
 
-const chart1 = new Chart(ctx, config);
+const chart1 = new Chart (
+    document.getElementById('chart-bar'),
+    config
+);
 
 
-/* Second chart 
-const ctx2 = document.getElementById('chart2');
-
+/* SECOND CHART */
 const labels2 = [
 
-    'Red',
-    'Blue',
-    'Yellow',
-    'Green',
-    'Purple',
+    'Bitcoin',
+    'Ethereum',
+    'Binance',
+    'Cardano',
+    'Tether',
     'Orange'
 
 ]
@@ -57,24 +68,41 @@ const labels2 = [
 const data2 = {
     labels,
     datasets: [{
-        data: [12, 19, 3, 5, 2, 3],
-        label: "Moedas",
+        data: [12, 19, 3, 5, 2, 15],
+        label: 'Moedas',
         fill: true,
-        backgroundColor:'cyan'
+        backgroundColor: [
+            '#f89422',
+            '#131330ea',
+            '#febe42',
+            '#0336ac',
+            '#029293',
+        ],
+        
+        borderColor: '#726A95'
     }]
 }
 
 const config2 = {
-    type: 'bar',
-    data,
+    type: 'pie',
+    data: data2,
     options: {
-        responsive: true
+        responsive: true,
+
+        plugins: {
+            title: {
+                display: true,
+                text: 'Útimos 90 dias',
+                letterSpacing: 0.3
+            }
+        }
     }
-};
+}
 
-const chart2 = new Chart(ctx2, config2)
-
-*/
+const chart2 = new Chart (
+    document.getElementById('chart-pie'),
+    config2
+);
 
 /* Hamburguer Menu 
 class mobileNavBar {

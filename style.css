@@ -21,7 +21,7 @@ html {
         "title title title title title "
         "bitcoin ethereum chart-bar chart-bar chart-bar"
         "cardano tether chart-bar chart-bar chart-bar"
-        "table table table chart chart";
+        "table table table chart-pie chart-pie";
 
     gap: 2em;
 
@@ -40,7 +40,7 @@ html {
     align-items: center;
     grid-area: h;
 
-    background-color: #3d3766;
+    background-color: #726A95;
 }
 
 .container header h1 {
@@ -57,7 +57,12 @@ html {
     text-align: center;
 }
 
-/* ASIDE 
+.container header img {
+    height: 5rem;
+    width: 5rem;
+}
+
+/* ASIDE */ 
 .container aside nav ul {
     display: none;
 }
@@ -77,7 +82,6 @@ html {
     background-color: white;
     margin: 0.3rem;
 }
-*/
 
 /* SQUARE WITH INFORMATION */
 .container .title {
@@ -91,47 +95,60 @@ html {
 
 .container .bitcoin {
     grid-area: bitcoin;
-    background-color: #3d3766;
+    background-color: #726A95;
 }
 
 .container .ethereum {
     grid-area: ethereum;
-    background-color: #3d3766;
+    background-color: #726A95;
 }
 
 .container .cardano {
     grid-area: cardano;
-    background-color: #3d3766;
+    background-color: #726A95;
 }
 
 .container .tether {
     grid-area: tether;
-    background-color: #3d3766;
+    background-color: #726A95;
 }
 
 .container .chart-bar {
     grid-area: chart-bar;
-    background-color: #3d3766;
+    background-color: #726A95;
+
+    padding: 1rem 0 1rem 0;
 }
 
 .container .table {
     grid-area: table;
-    background-color: #3d3766;
+
+    background-color: #726A95;
+    color: white;
+    font-size: 1.2rem;
+
+    padding: 0 3rem 0 3rem;
 }
 
-.container .chart {
-    grid-area: chart;
-    background-color: #3d3766;
+.container .table table {
+    width: 100%;  
+}
+
+.container .table table tr td {
+   padding-top: 2rem;
+   text-align: center;
 }
 
 /* SQUARE WITH CHART */
-.container .chart {
+.container .chart-pie {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: chart;
+    grid-area: chart-pie;
 
-    background-color: #3d3766;
+    background-color: #726A95;
+
+    padding: 1rem 0 1rem 0;
 }
 
 /* SECTION WITHIN SQUARE WITH INFORMATION */
@@ -184,13 +201,14 @@ html {
 
 /* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF ETHEREUM*/
 .container .ethereum section .image {
-    background-color: rgba(19, 19, 48, 0.918);
+    background-color: #131330ea;
 }
 
-/* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF BINANCE*/
+/* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF BINANCE
 .container .binance section .image {
     background-color: #febe42;
 }
+*/
 
 /* DIV IMAGE WITHIN SQUARE WITH INFORMATION OF CARDANO*/
 .container .cardano section .image {
@@ -203,16 +221,17 @@ html {
 }
 
 /* CONFIGURATION OF IMAGES OF SQUARES WITH INFORMATION */
-.container article section img {
-    height: 6rem;
-    width: 6rem;
-
-    border-radius: 100%;
-}
-
 .container .ethereum section img {
     height: 4rem;
     width: 3rem;
+}
+
+/* ALL IMAGES FROM THE SITE */
+img {
+    height: 7rem;
+    width: 7rem;
+
+    border-radius: 100%;
 }
 
 
@@ -232,9 +251,13 @@ html {
             "cardano tether"
             "chart-bar chart-bar"
             "table table"
-            "chart chart";
+            "chart-pie chart-pie";
 
         gap: 1rem;
+    }
+
+    .container header {
+        background-color: transparent;
     }
 }
 
@@ -242,7 +265,7 @@ html {
 @media (max-width: 600px) {
     .container {
         grid-template-columns: 100%;
-        grid-template-rows: 15% 5% 22% 22% 22% 22% 50% 50%;
+        grid-template-rows: 20% 5% 22% 22% 22% 22% 50% 50%;
         grid-template-areas:
             "h"
             "title"
@@ -252,7 +275,7 @@ html {
             "tether"
             "chart-bar"
             "table"
-            "chart";
+            "chart-pie";
     }
 
     .container .title h1 {
@@ -261,12 +284,14 @@ html {
 
     .container header {
         background-color: transparent;
+        flex-direction: column-reverse;
     }
-}
 
-@media (max-width: 510px) {
-    .container header {
-        flex-direction: column;
+    .container header aside {
+        background-color: #726A95;
+        width: 150%;
+
+        padding: 0.5rem;
     }
 }
 
@@ -276,16 +301,15 @@ html {
     }
 
     .container {
-        grid-template-rows: 15% 8% 22% 22% 22% 22% 50% 50%;
+        grid-template-rows: 25% 8% 22% 22% 22% 22% 50% 50%;
     }
 }
 
 @media (max-width: 298px) {
     .container {
-        grid-template-rows: 15% 8% 24% 24% 24% 24% 50% 50%;
+        grid-template-rows: 25% 8% 24% 24% 24% 24% 50% 50%;
     }
 }
-
 
 /* CELL PHONE 
 @media (min-width: 600px) and (max-width: 768px) {
