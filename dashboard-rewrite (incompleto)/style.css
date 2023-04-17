@@ -1,0 +1,106 @@
+* {
+    margin: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3rem;
+
+    color: white;
+}
+
+:root {
+    --default-color: #726A95;
+    --crypto-image-background: #131330ea
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "header     header      header      header      header"
+        "title      title       title       title       title"
+        "main       main        main        main        main"
+        "footer     footer      footer      footer      footer";
+    background-color: black;
+}
+
+
+/* header section */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: header;
+    border-radius: 20px;
+    padding: 15px;
+    cursor: default;
+
+    background-color: var(--default-color);
+}
+
+header div {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+
+/* title section */
+.page-title {
+    grid-area: title;
+    text-align: center;
+}
+
+
+/* main section */
+.main-grid-container {
+    display: grid;
+    grid-area: main;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "card-container card-container  chart-bar   chart-bar   chart-bar"
+        "card-container card-container  chart-bar   chart-bar   chart-bar"
+        "table          table           table       chart-pie   chart-pie"
+        "table          table           table       chart-pie   chart-pie";
+}
+
+/* cards section */
+.card-container {
+    grid-area: card-container;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem
+}
+
+.crypto-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 30px;
+    background-color: var(--default-color);
+}
+
+.crypto-card .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    height: 80px;
+    width: 80px;
+    margin: auto;
+
+    background-color: var(--crypto-image-background);
+}
+
+.crypto-card .image img {
+    border-radius: inherit;
+    height: 90%;
+}
+
+.ethereum .image img {
+    height: 60% !important;
+}
